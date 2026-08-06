@@ -9,4 +9,4 @@ INSERT INTO transfers (
 SELECT * FROM transfers ORDER BY created_at DESC LIMIT $1 OFFSET $2;
 
 -- name: GetTransfer :one
-SELECT * FROM transfers WHERE from_account_id = $1;
+SELECT * FROM transfers WHERE id = $1;

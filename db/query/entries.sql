@@ -9,4 +9,4 @@ INSERT INTO entries (
 SELECT * FROM entries ORDER BY created_at DESC LIMIT $1 OFFSET $2;
 
 -- name: GetEntry :one
-SELECT * FROM entries WHERE account_id = $1;
+SELECT * FROM entries WHERE id = $1;
