@@ -24,6 +24,8 @@ func TestMain(m *testing.M) {
 		log.Fatal("Couldn't connect to the database: ", err)
 	}
 
+	testDB.SetMaxIdleConns(10)
+	testDB.SetMaxOpenConns(10)
 	testQueries = New(testDB)
 
 	os.Exit(m.Run())
